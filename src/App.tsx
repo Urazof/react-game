@@ -22,11 +22,14 @@ export default function App() {
     const [start, setStart] = useState(false);
 
     return (
-        <>
-            <button onClick={() => setStart(true)}>StartGame</button>
-            <button onClick={() => setStart(false)}>StopGame</button>
-            {start ? res : ''}
-
-        </>
+        <div className="container" style={{textAlign:"center"}}>
+            <div className="row">
+                <div className="col" >
+                    <button onClick={() => setStart(true)}>StartGame</button>
+                    <button onClick={() => setStart(false)}>StopGame</button>
+                    {start ? res : ''}
+                </div>
+            </div>
+        </div>
     )
 }
