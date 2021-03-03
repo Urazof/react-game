@@ -27,7 +27,8 @@ export default function Game(props: gameProps){
 
     return <React.Fragment>
         {/*<h1>{props.name}</h1>*/}
-        <Matrix numbers={numbers} cellSize={cellSize}/>
+        <Matrix numbers={numbers} cellSize={cellSize} />
+
     </React.Fragment>;
 }
 
