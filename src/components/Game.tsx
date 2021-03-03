@@ -8,6 +8,7 @@ import {N_COLUMNS} from "../config/config";
 export default function Game(props: gameProps){
     //matrix as a state and effect
     const [numbers, setNumbers] = React.useState(getRandomMatrix(props.rows || 50, props.columns || 50));
+
     React.useEffect(() => {
         const intervalId = setInterval(() => setNumbers(num => transformField(num)), props.interval || 1000);
         return () => clearInterval(intervalId);
@@ -21,11 +22,11 @@ export default function Game(props: gameProps){
     }, []);
 
     function calculateCellSize(){
-        return Math.min(window.innerHeight * 0.85, window.innerWidth)/N_COLUMNS - 1;
+        return Math.min(window.innerHeight * 0.75, window.innerWidth*0.75)/N_COLUMNS - 1;
     }
 
     return <React.Fragment>
-        <h1>{props.name}</h1>
+        {/*<h1>{props.name}</h1>*/}
         <Matrix numbers={numbers} cellSize={cellSize}/>
     </React.Fragment>;
 }

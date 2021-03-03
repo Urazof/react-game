@@ -3,8 +3,8 @@ import React from 'react'
 export default function Row(props: rowProps) {
     function getStyle(number: number) {
         return {
-            "backgroundColor": number === 1 ? "lime" : "black",
-            // "border": "solid 1px gray",
+            "backgroundColor": number === 1 ? "black" : "lime",
+            "border": "solid 1px gray",
             "width": props.cellSize,
             "height": props.cellSize
         };
